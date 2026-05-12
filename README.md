@@ -6,13 +6,13 @@ This project uses the method of surrogate modelling to generate a dataset worth 
 # Repository Structure
 * **`data/`**
   * `DWSIM_ML_Dataset.csv` : 5000-row dataset generated via COM bridge.
-* **`document/`**
+* **`docs/`**
   * `Report.pdf` : Full technical documentation and methodology.
 * **`models/`**
   * `Distillation_MLP.pkl` : Saved neural network model.
   * `Distillation_SVR.pkl` : Saved Support Vector Regressor model.
   * `Scaler_X.pkl` / `Scaler_Y.pkl` : Input/output scalers for the ANN.
-* **`notebook/`**
+* **`notebooks/`**
   * `Dataset_Generation_and_Data_modelling.ipynb` : Script automating DWSIM data generation and script to train the ANN, SVR, and RF models.
 * **`simulation/`**
   * `Benzene_Toluene_Column.dwxmz` : DWSIM flowsheet utilizing Peng-Robinson EOS.
