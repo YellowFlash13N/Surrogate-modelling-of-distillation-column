@@ -13,7 +13,7 @@ This project uses the method of surrogate modelling to generate a dataset worth 
   * `Distillation_SVR.pkl` : Saved Support Vector Regressor model.
   * `Scaler_X.pkl` / `Scaler_Y.pkl` : Input/output scalers for the ANN.
 * **`notebooks/`**
-  * `Dataset_Generation_and_Data_modelling.ipynb` : Script automating DWSIM data generation and script to train the ANN, SVR, and RF models.
+  * `main.ipynb` : Script automating DWSIM data generation and script to train the ANN, SVR, and RF models.
 * **`simulation/`**
   * `Benzene_Toluene_Column.dwxmz` : DWSIM flowsheet utilizing Peng-Robinson EOS.
 * `README.md`
@@ -30,9 +30,9 @@ DWSIM v9.0.5
 4. To run this script successfully, ensure that FOSSEE.dwxmz is located in the exact directory specified in the notebook.
 
 # Execution Instructions
-1. Open DWSIM v9.0.5,  go to `File > Open`, and select `FOSSEE.dwxmz` to view the base flowsheet and thermodynamic setup.
-2. To run the data generation script successfully, ensure that `FOSSEE.dwxmz` is located in the exact directory specified in `Dataset_Generation.ipynb`. Run all cells to launch the COM-bridge and generate a new CSV.
-3. Open `Model_Training.ipynb` and run the cells. The script is instructed to load `DWSIM_ML_Dataset.csv` directly from the same folder to train the models and output metrics.
+1. Open DWSIM v9.0.5,  go to `File > Open`, and select `Benzene_Toluene_Column.dwxmz` to view the base flowsheet and thermodynamic setup.
+2. To run the data generation script successfully, ensure that `Benzene_Toluene_Column.dwxmz` is located in the exact directory specified in `main.ipynb`. Run all cells to launch the COM-bridge and generate a new CSV.
+3. Open `main.ipynb` and run the cells. The script is instructed to load `DWSIM_ML_Dataset.csv` directly from the same folder to train the models and output metrics.
 4. Load the `.pkl` files using `joblib`.
 
 # Key Results
