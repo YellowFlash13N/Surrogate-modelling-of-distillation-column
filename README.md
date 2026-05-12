@@ -4,14 +4,18 @@
 This project uses the method of surrogate modelling to generate a dataset worth 5000 points, taking control of DWSIM file with a flowsheet of a distillation column separating a Benzene-Toluene mixture using Peng Robinson EOS. By using DWSIM COM bridge, the 7 input parameters (Feed temperature, Feed pressure, Liquid feed composition (Benzene), No. of trays, Feed input tray, Reflux ratio and Bottoms withdrawal rate(W)) were used to calculate the 4 output parameters (Condenser Duty, Reboiler Duty, Distillate composition (Benzene) and Bottom composition (Toluene).) This data is used to model 3 ML models: Artificial Neural Network (ANN), Support Vector Regressor (SVR) and Random Forest (RF).
 
 # Repository Structure
-* `FOSSEE.dwxmz`: The DWSIM file containing the flowsheet utilizing Peng-Robinson EOS.
-* `DWSIM_ML_Dataset.csv`: A 5000 row dataset was generated using DWSIM COM bridge
-* `Dataset_Generation.ipynb`: The script used to automate DWSIM and generate the data.
-* `Model_Training.ipynb`: The script used to train the said ANN, SVM and RF models.
-* `Distillation_MLP.pkl`: The saved neural network model.
-* `Distillation_RF.pkl`: The saved Random Forests model.
-* `Distillation_SVR.pkl`: The saved Support Vector Regressor model.
-* `Scaler_X.pkl / Scaler_Y.pkl`: The input and output scalers required for the ANN.
+* **`data/`**
+  * `DWSIM_ML_Dataset.csv` : 5000-row dataset generated via COM bridge.
+* **`models/`**
+  * `Distillation_MLP.pkl` : Saved neural network model.
+  * `Distillation_SVR.pkl` : Saved Support Vector Regressor model.
+  * `Scaler_X.pkl` / `Scaler_Y.pkl` : Input/output scalers for the ANN.
+* **`notebooks/`**
+  * `Dataset_Generation.ipynb` : Script automating DWSIM data generation.
+  * `Model_Training.ipynb` : Script to train the ANN, SVR, and RF models.
+* **`simulation/`**
+  * `Benzene_Toluene_Column.dwxmz` : DWSIM flowsheet utilizing Peng-Robinson EOS.
+* `README.md`
 
 # Prerequisites and Dependencies
 Python 3.13
